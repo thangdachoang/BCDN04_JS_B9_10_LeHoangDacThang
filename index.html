@@ -187,7 +187,7 @@
 				<!-- Modal body -->
 				<div class="modal-body">
 
-					<form role="form">
+					<form id="myForm" role="form">
 
 						<div class="form-group">
 							<div class="input-group">
@@ -263,10 +263,10 @@
 									<span class="input-group-text"><i class="fa fa-briefcase"></i></span>
 								</div>
 								<select class="form-control" id="chucvu">
-									<option>Chọn chức vụ</option>
-									<option>Sếp</option>
-									<option>Trưởng phòng</option>
-									<option>Nhân viên</option>
+									<option value="0">Chọn chức vụ</option>
+									<option value="sep">Sếp</option>
+									<option value="truongPhong">Trưởng phòng</option>
+									<option value="nhanVien">Nhân viên</option>
 								</select>
 							</div>
 
@@ -290,6 +290,7 @@
 				<div class="modal-footer" id="modal-footer">
 					<button id="btnThemNV" type="button" class="btn btn-success">Thêm người dùng</button>
 					<button id="btnCapNhat" type="button" class="btn btn-success">Cập nhật</button>
+					<button id="reSet" type="button" class="btn btn-info" onclick="resetForm()">Reset</button>
 					<button id="btnDong" type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
 				</div>
 
@@ -324,6 +325,12 @@
 			});
 		});
 	</script>
+
+	<!-- JS -->
+	<script src="./js/main/NhanVien.js"></script>
+	<script src="./js/main/DanhSachNhanVien.js"></script>
+	<script src="./js/main/main.js"></script>
+
 </body>
 
 </html>
