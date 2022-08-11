@@ -148,7 +148,7 @@ function capNhatNV(nv) {
     && Validation.email(email,"tbEmail","Email không đúng định dạng");
     //check matkhau
   isValid &= Validation.checkEmpty(matKhau,"tbMatKhau","Mật khẩu không được để trống")
-    && Validation.matKhau(matKhau,"tbMatKhau","Mật khẩu không đúng định dạng");
+    && Validation.matKhau(matKhau,"tbMatKhau","mật Khẩu từ 6-10 ký tự (chứa ít nhất 1 ký tự số, 1 ký tự in hoa, 1 ký tự đặc biệt)");
     //check Date
   isValid &= Validation.checkEmpty(ngayLam,"tbNgay","Ngày không được để trống")
     && Validation.dateFomats(ngayLam,"tbNgay","Ngày không đúng định dạng");
@@ -164,7 +164,7 @@ function capNhatNV(nv) {
   
   if(isValid ){
 
-  var nv = new NhanVien( taiKhoan,hoTen,email, matKhau, ngayLam,Number(luongCoBan),chucVu, Number(gioLamTrongThang) );
+  var nv = new NhanVien( taiKhoan,hoTen,email, matKhau, ngayLam,Number(luongCoBan),chucVu,Number(gioLamTrongThang));
   nv.tinhTongLuong();
   nv.xepLoai();
 

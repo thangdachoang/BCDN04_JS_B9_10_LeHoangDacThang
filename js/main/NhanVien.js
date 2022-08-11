@@ -14,11 +14,11 @@ function NhanVien(taiKhoan,hoTen,email,matKhau,ngayLam,luongCoBan,chucVu,gioLamT
     this.loaiNhanVien = 0;
 
     this.tinhTongLuong = function (){
-        if(this.chucVu=="sep"){
+        if(this.chucVu=="Sếp"){
             this.tongLuong=this.luongCoBan * 3;
-        }else if(this.chucVu =="truongPhong"){
+        }else if(this.chucVu =="Trưởng phòng"){
             this.tongLuong=this.luongCoBan * 2;
-        }else if(this.chucVu == "nhanVien")
+        }else if(this.chucVu == "Nhân viên")
             this.tongLuong=this.luongCoBan * 1;
     };
 

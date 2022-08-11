@@ -67,7 +67,7 @@ function Validation(){
     }
 
     this.matKhau = function(inputVal, spanID, message){
-        var pattent = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,10}$/;
+        var pattent = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{6,10}$/;
         if(inputVal.match(pattent)){
             document.getElementById(spanID).innerHTML = "";
             document.getElementById(spanID).style.display = "none";
