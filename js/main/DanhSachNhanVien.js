@@ -34,5 +34,18 @@ function DanhSachNhanVien(){
         if(viTri >-1){
             dsnv.mangNV[viTri]= nv;
         }
-    }
+    };
+
 }
+
+
+DanhSachNhanVien.prototype.timKiem = function(timKiem){
+    var mangTK = [];
+    this.mangNV.map(function(nv){
+        var viTriTK = nv.loaiNhanVien.toLowerCase().indexOf(timKiem.toLowerCase());
+        if(viTriTK !== -1){
+            mangTK.push(nv);
+        }
+    });
+    return mangTK;
+};
